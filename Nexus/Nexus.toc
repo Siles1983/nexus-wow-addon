@@ -1,0 +1,37 @@
+## Interface: 120000
+## Title: Nexus
+## Notes: Soziale Sichtbarkeitsschicht fuer WoW-Spieler – mit Structured Post System (Midnight-ready)
+## Author: Nexus Dev Team
+## Version: 0.9.7-alpha
+## SavedVariables: NexusDB NexusConfig NexusPeerCache NexusTestReport NexusMinimapDB
+
+## Load Order:
+## 1. Nexus_Locale   – Lokalisierung (muss zuerst, L["KEY"] global)
+## 2. Nexus_State    – State-Machine (Fundament)
+## 3. Nexus_Comm     – Token-Bucket Queue
+## 4. Nexus_Shield   – Validierung (inkl. PostWire)
+## 5. Nexus_DB       – SavedVariables (inkl. Posts)
+## 6. Nexus_Post     – Post-Schema, Serialisierung, Lifecycle (NEU)
+## 7. Nexus_Net      – Handshake, Post-Versand/Empfang
+## 8. Nexus_UI              – Haupt-UI Frame
+## 9. Nexus_MinimapButton   – Minimap-Button (UI öffnen per Klick)
+## 10. Nexus_Scroll         – VirtualScroll (Row-Rendering fuer Posts)
+## 11. Nexus_Panels        – Feed / Profile / Settings (Feed → Posts)
+## 12. Nexus_PostUI        – Create-Post-Panel
+## 13. Nexus_BetaDashboard – Telemetrie Dashboard
+## 14. Nexus_TestDriver    – Unit Test Runner
+
+Nexus_Locale.lua
+Nexus_State.lua
+Nexus_Comm.lua
+Nexus_Shield.lua
+Nexus_DB.lua
+Nexus_Post.lua
+Nexus_Net.lua
+Nexus_UI.lua
+Nexus_MinimapButton.lua
+Nexus_Scroll.lua
+Nexus_Panels.lua
+Nexus_PostUI.lua
+Nexus_BetaDashboard.lua
+Nexus_TestDriver.lua
